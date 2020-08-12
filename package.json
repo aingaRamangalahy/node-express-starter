@@ -4,9 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently -n \"TS, Node\" \"npx tsc --watch\" \"nodemon dist/index.js\"",
+    "prod": "npm run build && npm run start"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@types/cors": "^2.8.7",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.7",
+    "@types/mongoose": "^5.7.36",
+    "@types/mongoose-paginate": "^5.0.8",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.28",
+    "mongoose-paginate": "^5.0.3"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4",
+    "typescript": "^3.9.7"
+  }
 }
